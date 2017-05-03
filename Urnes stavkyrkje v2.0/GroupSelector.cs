@@ -80,12 +80,12 @@ namespace AndyApp3
         menu.AddView(divider, lpd);
       }
 
-      var click = FindViewById<Button>(Resource.Id.scan);
-      click.Click += Click_Click;
+      var cameraButton = FindViewById<Button>(Resource.Id.scan);
+      cameraButton.Click += CameraButton_Click;
 
     }
 
-    async void Click_Click(object sender, EventArgs e)
+    async void CameraButton_Click(object sender, EventArgs e)
     {
       var scanner = new MobileBarcodeScanner();
       var options = new MobileBarcodeScanningOptions
