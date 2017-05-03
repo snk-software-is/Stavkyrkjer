@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">Urnes stavkyrkje</string>
+  <string name="BackToMainMenu">VELG NY KATEGORI</string>
+  <string name="PrevQuestion">FORRIGE SPØRSMÅL</string>
+  <string name="NextQuestion">NESTE SPØRSMÅL</string>
+  <string name="SubmitQuestion">GJE SVAR</string>
+  <string name="WrongAnswerTryAgain">Minst eitt av svara er feil. Prøv igjen.</string>
+  <string name="MainMenu">Meny</string>
+  <string name="MainMenuInfo">Finn svar på alle spørsmåla og løs runegåta.</string>
+  <string name="CorrectAnswer">Riktig!</string>
+  <string name="GoToNextGroup">GÅ TIL NESTE POST</string>
+  <string name="AllCorrect">Gratulerer! Du har funne svaret på runegåta.</string>
+  <string name="EnterCodeToRestart">Tast kode for å starte forfra:</string>
+  <string name="CancelCode">Lukk</string>
+  <string name="SendCode">Ok</string>
+  <string name="RestartCode">123</string>
+</resources>

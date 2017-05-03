@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<questiongroups>
+  <questiongroup name="Byggjekunst" text="Byggjekunst" background="FFC0D6E8" thumb="0" clue="ARNE">
+    <question id="1" text="Kvifor bygde ein stavkyrkja oppå ein grunnmur?">
+      <answer correct="true" text="For at kyrkja ikkje skulle rotne så lett"/>
+      <answer correct="false" text="For at kyrkja skulle bli høgare"/>
+      <answer correct="false" text="For at kyrkja skulle sjå fin ut"/>
+    </question>
+    <question id="2" text="Kva er ein veggsville?">
+      <answer correct="false" text="Ein vassrett bjelke som ligg langs taket"/>
+      <answer correct="false" text="Ein loddrett stav som står i hjørnet av bygningen"/>
+      <answer correct="true" text="Ein vassrett bjelke som ligg på bakken"/>
+    </question>
+    <question id="3" text="Kva kallar me dei kyrkjene som stod her før stavkyrkja?">
+      <answer correct="true" text="Stolpekyrkje"/>
+      <answer correct="false" text="Steinkyrkje"/>
+      <answer correct="false" text="Langkyrkje"/>
+    </question>
+  </questiongroup>
+
+  <questiongroup name="Religion" text="Religion" background="FFC1C9DE" thumb="1" clue="PREST">
+    <question id="1" text="Kva tid byrja kristninga av Noreg?">
+      <answer correct="false" text="500-talet"/>
+      <answer correct="true" text="900-talet"/>
+      <answer correct="false" text="1300-talet"/>
+    </question>
+    <question id="2" text="Korleis kan ein bli frelst i følgje luthersk kristendom?">
+      <answer correct="true" text="Gjennom å tru"/>
+      <answer correct="false" text="Gjennom å gje gåver til dei fattige"/>
+      <answer correct="false" text="Gå i kyrkja"/>
+    </question>
+    <question id="3" text="Korleis såg dei luthersk kristne på helgenar?">
+      <answer correct="false" text="Dei bad til dei"/>
+      <answer correct="true" text="Dei tok dei vekk"/>
+      <answer correct="false" text="Dei nytta dei i gudstenesta"/>
+    </question>
+  </questiongroup>
+
+  <questiongroup name="Geografi" text="Geografi" background="FFC8D6C3" thumb="2" clue="VIL">
+    <question id="1" text="Kva for nokre varer blei frakta over Sognefjellet til Austlandet i mellomalderen?">
+      <answer correct="true" text="Fisk"/>
+      <answer correct="false" text="Poteter"/>
+      <answer correct="false" text="Mais"/>
+    </question>
+    <question id="2" text="Kvifor blei stavkyrkja bygd akkurat her?">
+      <answer correct="true" text="For at den skulle vera lett å sjå frå fjorden"/>
+      <answer correct="false" text="Det var særskilt godt trevirke der til å byggja ei kyrkje"/>
+      <answer correct="false" text="For å betre tola vind og vêr"/>
+    </question>
+    <question id="3" text="Kven bygde kyrkja?">
+      <answer correct="false" text="Kongen"/>
+      <answer correct="false" text="Biskopen"/>
+      <answer correct="true" text="Privatpersonar"/>
+    </question>
+  </questiongroup>
+
+  <questiongroup name="UNESCO" text="UNESCO" background="FFFFF9C7" thumb="3" clue="HA">
+    <question id="1" text="Kor mange stader har Norge på verdsarvlista?">
+      <answer correct="false" text="5"/>
+      <answer correct="false" text="7"/>
+      <answer correct="true" text="8"/>
+    </question>
+    <question id="2" text="Kva skal UNESCO arbeida for?">
+      <answer correct="true" text="Ta vare på verdsarven"/>
+      <answer correct="false" text="Arbeide for flyktningar"/>
+      <answer correct="false" text="Betre helsetilbodet i verda"/>
+    </question>
+    <question id="3" text="Når blei Urnes kyrkje skrive inn på verdsarvlista?">
+      <answer correct="false" text="1945"/>
+      <answer correct="false" text="1975"/>
+      <answer correct="true" text="1979"/>
+    </question>
+  </questiongroup>
+
+  <questiongroup name="Kultur" text="Kultur" background="FFFBDFD8" thumb="4" clue="INGA">
+    <question id="1" text="Kor kom dei kostbare lysestakane frå?">
+      <answer correct="false" text="Tyskland"/>
+      <answer correct="false" text="England"/>
+      <answer correct="true" text="Frankrike"/>
+    </question>
+    <question id="2" text="Kva språk song ein på i kyrkja i mellomalderen?">
+      <answer correct="false" text="Engelsk"/>
+      <answer correct="false" text="Fransk"/>
+      <answer correct="true" text="Latin"/>
+    </question>
+    <question id="3" text="Kva type materiale nytta ein for å laga bøker i mellomalderen?">
+      <answer correct="false" text="Silke"/>
+      <answer correct="false" text="Hundeskinn"/>
+      <answer correct="true" text="Kalveskinn"/>
+    </question>
+  </questiongroup>
+</questiongroups>

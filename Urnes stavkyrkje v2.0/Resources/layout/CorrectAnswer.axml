@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/CorrectAnswer">
+    <TextView
+        android:id="@+id/Congratulations"
+        android:text="@string/CorrectAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="28dp"
+        android:padding="30px"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+        <RelativeLayout
+            android:id="@+id/Spacer1"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true" />
+        <RelativeLayout
+            android:id="@+id/Spacer2"
+            android:layout_width="wrap_content"
+            android:layout_height="190dp"
+            android:layout_alignParentTop="true" />
+        <RelativeLayout
+            android:id="@+id/Spacer3"
+            android:layout_width="wrap_content"
+            android:layout_height="430dp"
+            android:layout_alignParentTop="true" />
+        <ImageView
+            android:id="@+id/Runepinnen"
+            android:background="@drawable/runepinnen"
+            android:layout_width="664dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/Spacer1"
+            android:layout_centerHorizontal="true"/>
+        
+        <ImageView
+            android:id="@+id/Thumbs"
+            android:background="@drawable/Knapp4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Spacer2" />
+        <LinearLayout
+            android:id="@+id/Clues"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/Spacer3" />
+      <TextView
+          android:id="@+id/AllCorrect"
+          android:text="@string/AllCorrect"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@android:color/black"
+          android:textSize="28dp"
+          android:padding="30px"
+          android:layout_centerHorizontal="true"
+          android:layout_above="@+id/Clues"
+          android:visibility="visible"
+          />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/CodeEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:padding="2px"
+        android:background="@android:color/black"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8px"
+            android:background="@android:color/white">
+            <TextView
+                android:id="@+id/CodeLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="@android:color/black"
+                android:text="@string/EnterCodeToRestart"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+            <EditText
+                android:inputType="numberPassword"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/CodeLabel"
+                android:id="@+id/editText1"
+                android:textAlignment="center" />
+            <Button
+                android:id="@+id/Cancel"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText1"
+                android:text="@string/CancelCode"
+                android:layout_alignLeft="@id/editText1" />
+            <Button
+                android:id="@+id/Send"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editText1"
+                android:text="@string/SendCode"
+                android:layout_alignRight="@id/editText1" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/GoToNextGroup"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:textSize="20dp" />
+    </RelativeLayout>
+</RelativeLayout>
