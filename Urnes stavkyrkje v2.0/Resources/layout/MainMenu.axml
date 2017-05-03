@@ -38,5 +38,6 @@
       android:textColor="@android:color/black"
       android:layout_centerHorizontal="true"
     android:layout_above="@+id/MainMenuInfo"
+    android:visibility="gone"
           />
 </RelativeLayout>
