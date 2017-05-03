@@ -1,17 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
-using Android.Content.Res;
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
 using Android.Util;
-using Android.Views;
 using Android.Widget;
 
 using ZXing;
@@ -19,7 +14,7 @@ using ZXing.Mobile;
 
 using Result = Android.App.Result;
 
-namespace AndyApp3
+namespace UrnesStavkyrkje
 {
   [Activity(Label = "Velg post", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
   public class GroupSelector : Activity

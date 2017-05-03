@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 
 using Android.App;
-using Android.Content;
 using Android.Graphics;
 using Android.OS;
 using Android.Runtime;
@@ -13,9 +9,7 @@ using Android.Views;
 using Android.Webkit;
 using Android.Widget;
 
-using Java.Lang;
-
-namespace AndyApp3
+namespace UrnesStavkyrkje
 {
   [Activity(Label = "Feil svar", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
   public class WrongAnswerActivity : Activity

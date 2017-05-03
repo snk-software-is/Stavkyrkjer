@@ -9,7 +9,7 @@ using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
 
-namespace AndyApp3
+namespace UrnesStavkyrkje
 {
   [Activity(Label = "@string/CorrectAnswer", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
   public class CorrectAnswer : Activity

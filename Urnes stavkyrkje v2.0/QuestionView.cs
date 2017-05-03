@@ -1,21 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 
 using Android.Content;
-using Android.Content.Res;
 using Android.Graphics;
-using Android.Graphics.Drawables;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-using Javax.Xml.Parsers;
-
-using Org.Xml.Sax;
-
-namespace AndyApp3
+namespace UrnesStavkyrkje
 {
   public class QuestionView : RelativeLayout
   {

@@ -1,10 +1,9 @@
-using System;
 using System.Collections.Generic;
 
 using Org.Xml.Sax;
 using Org.Xml.Sax.Helpers;
 
-namespace AndyApp3
+namespace UrnesStavkyrkje
 {
   public class QuestionsXmlHandler : DefaultHandler
   {

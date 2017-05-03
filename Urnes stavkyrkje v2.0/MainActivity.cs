@@ -5,19 +5,18 @@ using System.Linq;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
 
 using Javax.Xml.Parsers;
 
 using Org.Xml.Sax;
 
-using ZXing;
 using ZXing.Mobile;
 
 using Result = Android.App.Result;
 
-namespace AndyApp3
+namespace UrnesStavkyrkje
 {
   [Activity(Label = "Urnes stavkyrkje", MainLauncher = true, Icon = "@drawable/icon2", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen", ScreenOrientation = ScreenOrientation.Landscape)]
   public class MainActivity : Activity
