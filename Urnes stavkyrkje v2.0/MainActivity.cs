@@ -34,7 +34,7 @@ namespace UrnesStavkyrkje
 
       var splash = new RelativeLayout(this);
       var img = new Button(this) { Background = Resources.GetDrawable(Resource.Drawable.Urnes) };
-      img.Click += Img_Click;
+      img.Click += DismissSplash_Click;
       
       splash.AddView(img, -1,-1);
       AddContentView(splash, new RelativeLayout.LayoutParams(-1,-1));
@@ -54,7 +54,7 @@ namespace UrnesStavkyrkje
 
     
 
-    void Img_Click(object sender, EventArgs e)
+    void DismissSplash_Click(object sender, EventArgs e)
     {
       splashClicked = true;
       ShowMenu();
@@ -62,13 +62,27 @@ namespace UrnesStavkyrkje
 
     void ShowMenu()
     {
+
+      var i = new Intent(this, typeof(ScanGroup));
+      i.PutExtra("BgColor", "FFC0D6E8");
+      i.PutExtra("Thumbs", -1);
+
+      var clues = GetCluesAndAnswers();
+      i.PutExtra("Clues", clues.Values.Select(t => t.Item1).ToArray());
+      i.PutExtra("Answers", clues.Values.Select(t => t.Item2).ToArray());
+
+      StartActivityForResult(i, 3);
+
+      /*
+
+
       var i = new Intent(this, typeof(GroupSelector));
 
       i.PutExtra("Groups", questionGroups.Keys.ToArray());
       var clues = GetCluesAndAnswers();
       i.PutExtra("Answers", clues.Values.Select(t => t.Item2).ToArray());
       i.PutExtra("Colors", questionGroups.Values.Select(t=>t.Background).ToArray());
-      StartActivityForResult(i, 2);
+      StartActivityForResult(i, 2);*/
     }
 
     void SetupQuestion()
@@ -77,7 +91,6 @@ namespace UrnesStavkyrkje
       {
         answers.Add(currentQuestionGroup, Enumerable.Repeat(-1, questionGroups[currentQuestionGroup].Questions.Count).ToArray());
       }
-
 
       var v = new QuestionView(
         this,
@@ -155,8 +168,19 @@ namespace UrnesStavkyrkje
           if (resultCode == Result.Ok)
           {
             answers = new Dictionary<string, int[]>();
+            ShowMenu(); // Show new welcome page
           }
-          ShowMenu();
+          else
+          {
+            currentQuestionGroup = data.GetStringExtra("GroupId");
+            if (currentQuestionGroup == null || !questionGroups.ContainsKey(currentQuestionGroup))
+            {
+              ShowMenu();
+              break;
+            }
+            questionNumber = 0;
+            SetupQuestion();
+          }
           break;
         case 2:
           currentQuestionGroup = data.GetStringExtra("GroupId");

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Threading;
 
 using Android.App;
 using Android.Content;
@@ -19,8 +18,8 @@ using Result = Android.App.Result;
 
 namespace UrnesStavkyrkje
 {
-  [Activity(Label = "@string/CorrectAnswer", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
-  public class CorrectAnswer : Activity
+  [Activity(Label = "ScanQuestion", Theme = "@android:style/Theme.Black.NoTitleBar.Fullscreen")]
+  public class ScanGroup : Activity
   {
     public bool AllCorrect;
 
@@ -28,12 +27,14 @@ namespace UrnesStavkyrkje
     {
       base.OnCreate(savedInstanceState);
 
-      SetContentView(Resource.Layout.CorrectAnswer);
+      SetContentView(Resource.Layout.ScanGroup);
 
       var wa = FindViewById<RelativeLayout>(Resource.Id.CorrectAnswer);
       var BgColor = new Color(int.Parse(Intent.GetStringExtra("BgColor"), NumberStyles.AllowHexSpecifier | NumberStyles.HexNumber));
       wa.SetBackgroundColor(BgColor);
 
+      var t = FindViewById<ImageView>(Resource.Id.Thumbs);
+      t.Visibility = ViewStates.Gone;
       var thumbs = Intent.GetIntExtra("Thumbs", -1);
       if (thumbs != -1)
       {
@@ -54,7 +55,6 @@ namespace UrnesStavkyrkje
             thumbImg = 0;
             break;
         }
-        var t = FindViewById<ImageView>(Resource.Id.Thumbs);
         var d = Resources.GetDrawable(thumbImg);
         t.Background = d;
       }
@@ -86,7 +86,7 @@ namespace UrnesStavkyrkje
         nextArrow.Bounds = new Rect(0, 0, 51, 51);
         btn.SetCompoundDrawables(null, null, nextArrow, null);
       }
-      btn.Click += CameraButton_Click; // Btn_Click;
+      btn.Click += Btn_Click;
 
 
       var edit = FindViewById<EditText>(Resource.Id.editText1);
@@ -132,7 +132,7 @@ namespace UrnesStavkyrkje
       }
     }
 
-    async void CameraButton_Click(object sender, EventArgs e)
+    private async void Btn_Click(object sender, EventArgs e)
     {
       if (AllCorrect)
       {
@@ -144,7 +144,7 @@ namespace UrnesStavkyrkje
         var scanner = new MobileBarcodeScanner();
         var options = new MobileBarcodeScanningOptions
         {
-          PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE },          
+          PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE },
         };
         scanner.BottomText = Resources.GetString(Resource.String.ScanHelp);
 
@@ -156,10 +156,8 @@ namespace UrnesStavkyrkje
         SetResult(Result.Canceled, data);
         Finish();
       }
-    }
 
-    private void Btn_Click(object sender, EventArgs e)
-    {
+      /*
       if (AllCorrect)
       {
         var code = FindViewById<RelativeLayout>(Resource.Id.CodeEntry);
@@ -167,10 +165,9 @@ namespace UrnesStavkyrkje
       }
       else
       {
-        CameraButton_Click(sender, e);
-        //SetResult(Result.Canceled);
-        //Finish();
-      }
+        SetResult(Result.Canceled);
+        Finish();
+      }*/
     }
   }
 }

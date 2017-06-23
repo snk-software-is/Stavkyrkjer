@@ -2847,8 +2847,8 @@ namespace UrnesStavkyrkje
 			// aapt resource value: 0x7f0900c7
 			public const int Hourglass = 2131296455;
 			
-			// aapt resource value: 0x7f09008f
-			public const int MainMenuInfo = 2131296399;
+			// aapt resource value: 0x7f090090
+			public const int MainMenuInfo = 2131296400;
 			
 			// aapt resource value: 0x7f090078
 			public const int Runepinnen = 2131296376;
@@ -3111,8 +3111,8 @@ namespace UrnesStavkyrkje
 			// aapt resource value: 0x7f0900b1
 			public const int media_actions = 2131296433;
 			
-			// aapt resource value: 0x7f090081
-			public const int menu = 2131296385;
+			// aapt resource value: 0x7f09008f
+			public const int menu = 2131296399;
 			
 			// aapt resource value: 0x7f090022
 			public const int middle = 2131296290;
@@ -3252,8 +3252,8 @@ namespace UrnesStavkyrkje
 			// aapt resource value: 0x7f0900b5
 			public const int right_side = 2131296437;
 			
-			// aapt resource value: 0x7f090090
-			public const int scan = 2131296400;
+			// aapt resource value: 0x7f090081
+			public const int scan = 2131296385;
 			
 			// aapt resource value: 0x7f09001b
 			public const int screen = 2131296283;
@@ -3709,25 +3709,28 @@ namespace UrnesStavkyrkje
 			public const int questionGroup = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int select_dialog_item_material = 2130903106;
+			public const int ScanGroup = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int select_dialog_multichoice_material = 2130903107;
+			public const int select_dialog_item_material = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int select_dialog_singlechoice_material = 2130903108;
+			public const int select_dialog_multichoice_material = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int support_simple_spinner_dropdown_item = 2130903109;
+			public const int select_dialog_singlechoice_material = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public const int WrongAnswer = 2130903110;
+			public const int support_simple_spinner_dropdown_item = 2130903110;
 			
 			// aapt resource value: 0x7f030047
-			public const int zxingscanneractivitylayout = 2130903111;
+			public const int WrongAnswer = 2130903111;
 			
 			// aapt resource value: 0x7f030048
-			public const int zxingscannerfragmentlayout = 2130903112;
+			public const int zxingscanneractivitylayout = 2130903112;
+			
+			// aapt resource value: 0x7f030049
+			public const int zxingscannerfragmentlayout = 2130903113;
 			
 			static Layout()
 			{
@@ -3777,6 +3780,15 @@ namespace UrnesStavkyrkje
 			
 			// aapt resource value: 0x7f07004d
 			public const int RestartCode = 2131165261;
+			
+			// aapt resource value: 0x7f07004f
+			public const int ScanGroup = 2131165263;
+			
+			// aapt resource value: 0x7f070050
+			public const int ScanHelp = 2131165264;
+			
+			// aapt resource value: 0x7f07004e
+			public const int ScanQuestion = 2131165262;
 			
 			// aapt resource value: 0x7f07004c
 			public const int SendCode = 2131165260;

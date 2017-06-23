@@ -86,7 +86,6 @@ namespace UrnesStavkyrkje
       var options = new MobileBarcodeScanningOptions
       {
         PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE }
-
       };
       var result = await scanner.Scan(options);
 
