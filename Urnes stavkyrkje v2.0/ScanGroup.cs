@@ -81,7 +81,9 @@ namespace UrnesStavkyrkje
         var congrats = FindViewById<TextView>(Resource.Id.AllCorrect);
         congrats.Visibility = ViewStates.Gone;
 
-        btn.Text = Resources.GetString(Resource.String.GoToNextGroup) + "  ";
+        if (answers.All(a => !a))
+          btn.Text = Resources.GetString(Resource.String.GoToFirstGroup) + "  ";
+        else btn.Text = Resources.GetString(Resource.String.GoToNextGroup) + "  ";
         var nextArrow = Resources.GetDrawable(Resource.Drawable.Next);
         nextArrow.Bounds = new Rect(0, 0, 51, 51);
         btn.SetCompoundDrawables(null, null, nextArrow, null);

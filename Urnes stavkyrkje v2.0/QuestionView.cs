@@ -196,7 +196,7 @@ namespace UrnesStavkyrkje
     {
       var rbe = sender as RadioButton;
       rbe.Background =
-        Resources.GetDrawable(rbe.Checked ? Resource.Drawable.ButtonBackgroundChecked : Resource.Drawable.ButtonBackground);
+        Resources.GetDrawable(rbe.Checked ? Resource.Drawable.ButtonBackgroundCheckedGrey : Resource.Drawable.ButtonBackground);
     }
 
     private void BtnNext_Click(object sender, EventArgs e)

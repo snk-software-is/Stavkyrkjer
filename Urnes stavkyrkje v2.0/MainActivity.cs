@@ -52,7 +52,10 @@ namespace UrnesStavkyrkje
       
     }
 
-    
+    public override void OnBackPressed()
+    {
+      ShowMenu();
+    }
 
     void DismissSplash_Click(object sender, EventArgs e)
     {
@@ -162,7 +165,13 @@ namespace UrnesStavkyrkje
       switch (requestCode)
       {
         case 1:
-          ShowMenu();
+          if (currentQuestionGroup == null || !questionGroups.ContainsKey(currentQuestionGroup))
+          {
+            ShowMenu();
+            break;
+          }
+          questionNumber = 0;
+          SetupQuestion();
           break;
         case 3:
           if (resultCode == Result.Ok)
@@ -172,7 +181,7 @@ namespace UrnesStavkyrkje
           }
           else
           {
-            currentQuestionGroup = data.GetStringExtra("GroupId");
+            currentQuestionGroup = data?.GetStringExtra("GroupId");
             if (currentQuestionGroup == null || !questionGroups.ContainsKey(currentQuestionGroup))
             {
               ShowMenu();
